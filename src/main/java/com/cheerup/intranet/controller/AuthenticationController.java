@@ -2,6 +2,8 @@ package com.cheerup.intranet.controller;
 
 import com.cheerup.intranet.model.AuthRequest;
 import com.cheerup.intranet.util.JwtUtil;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +24,9 @@ public class AuthenticationController {
     @Autowired
     private JwtUtil jwtUtil;
 
-    @GetMapping(path = "/hello")
-    public ResponseEntity<String> hello() {
+    @GetMapping(path = "/userdetail")
+    @Operation(summary = "User details endpoint", security = @SecurityRequirement(name = "bearerAuth"))
+    public ResponseEntity<String> getUserDetails() {
         return ResponseEntity.ok()
                 .body("Bienvenue dans Cheer-up Intranet !");
     }
