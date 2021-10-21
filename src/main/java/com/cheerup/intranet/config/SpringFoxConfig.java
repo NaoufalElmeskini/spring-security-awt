@@ -7,17 +7,17 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
-//@Configuration
+@Configuration
 public class SpringFoxConfig {
 
-//    @Bean
-//    public Docket api() {
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .select()
-//                .apis(RequestHandlerSelectors.basePackage("com.cheerup.intranet.controller"))
-//                .paths(PathSelectors.any())
-//                .build();
-//    }
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.cheerup.intranet.controller"))
+                .paths(PathSelectors.any())
+                .build();
+    }
 
 
 }
