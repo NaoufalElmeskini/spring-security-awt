@@ -18,28 +18,28 @@ import springfox.documentation.spring.web.plugins.Docket;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //public class WebSecurityConfig {
 
-    @Bean
-    @Override
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
-    }
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.cors().and().csrf().disable()
-                .authorizeRequests()
-                .antMatchers("/login", "/register", "/swagger-ui.html").permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-    }
-
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("user-1").password("{noop}user-1").roles("USER").and()
-                .withUser("admin-1").password("{noop}admin-1").roles("ADMIN");
-    }
+//    @Bean
+//    @Override
+//    public AuthenticationManager authenticationManagerBean() throws Exception {
+//        return super.authenticationManagerBean();
+//    }
+//
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.cors().and().csrf().disable()
+//                .authorizeRequests()
+//                .antMatchers("/login", "/register", "/swagger-ui.html").permitAll()
+//                .anyRequest().authenticated()
+//                .and()
+//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+//    }
+//
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.inMemoryAuthentication()
+//                .withUser("user-1").password("{noop}user-1").roles("USER").and()
+//                .withUser("admin-1").password("{noop}admin-1").roles("ADMIN");
+//    }
 
     @Bean
     public Docket api() {

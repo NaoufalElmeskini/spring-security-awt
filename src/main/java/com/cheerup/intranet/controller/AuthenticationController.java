@@ -16,8 +16,8 @@ public class AuthenticationController {
     private Logger LOGGER = LoggerFactory.getLogger(AuthenticationController.class);
 
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
+//    @Autowired
+//    private AuthenticationManager authenticationManager;
 
     @Autowired
     private JwtUtil jwtUtil;
@@ -32,9 +32,9 @@ public class AuthenticationController {
     public String generateToken(@RequestBody AuthRequest request) {
         LOGGER.debug("\n\ngenerateToken() - request : {}\n" , request);
 
-        authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(request.getUserName(), request.getPassword())
-        );
+//        authenticationManager.authenticate(
+//                new UsernamePasswordAuthenticationToken(request.getUserName(), request.getPassword())
+//        );
 
         return jwtUtil.generateToken(request.getUserName());
     }
