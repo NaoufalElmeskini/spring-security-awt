@@ -18,10 +18,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private static final String[] AUTH_WHITELIST = {
             "/swagger-resources/**",
             "/swagger-ui/*",
+            "/swagger-ui.html",
             "/staticUsers",
             "/login",
-            "/v3/api-docs",
-            "/webjars/**"
+            "/v3/api-docs"
     };
 
     private Filter jwtTokenFilter;
