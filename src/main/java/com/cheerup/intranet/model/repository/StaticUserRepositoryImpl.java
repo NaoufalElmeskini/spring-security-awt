@@ -5,7 +5,6 @@ import com.cheerup.intranet.model.enums.Authority;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
@@ -20,33 +19,32 @@ public class StaticUserRepositoryImpl implements UserRepository {
     private Map<String, UserDTO> initMap() {
         Map<String, UserDTO> map = new HashMap<>();
 
-        UserDTO user = createUser("user-1");
+        UserDTO user = createUser((long) 1, "user-1");
         map.put(user.getUsername(), user);
-        user = createUser("admin-1");
+        user = createUser((long) 2, "admin-1");
         map.put(user.getUsername(), user);
 
         return map;
     }
 
-
     @Override
-    public List<UserDetails> getAllUsers() {
+    public List<UserDTO> getAllUsers() {
         return new ArrayList<>(USERS.values());
     }
 
 
     @Override
-    public UserDetails findUserByUserName(String username) {
+    public UserDTO findUserByUserName(String username) {
         return USERS.get(username);
     }
 
-    private UserDTO createUser(String username) {
+    private UserDTO createUser(Long id, String username) {
         UserDTO user = new UserDTO();
+        user.setId(id);
 
         user.setActive(true);
 
         user.setUsername(username);
-        user.setPassword("******");
 
         user.setFirstName("John");
         user.setLastName("Doe");

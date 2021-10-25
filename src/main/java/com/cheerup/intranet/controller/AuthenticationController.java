@@ -2,6 +2,7 @@ package com.cheerup.intranet.controller;
 
 import com.cheerup.intranet.model.AuthRequest;
 import com.cheerup.intranet.model.dto.UserDTO;
+import com.cheerup.intranet.service.UtilisateurService;
 import com.cheerup.intranet.util.JwtUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
@@ -12,7 +13,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
@@ -28,7 +28,7 @@ public class AuthenticationController {
     private JwtUtil jwtUtil;
 
     @Autowired
-    private UserDetailsService userDetailsService;
+    private UtilisateurService userService;
 
 
     @PostMapping(path = "/login")
@@ -44,11 +44,11 @@ public class AuthenticationController {
 
     @GetMapping(path = "/user")
     @Operation(summary = "User details endpoint", security = @SecurityRequirement(name = "bearerAuth"))
-    public ResponseEntity<UserDetails> getUserDetails(Principal principal) {
+    public ResponseEntity<UserDTO> getUserDetails(Principal principal) {
 
         String userName = principal.getName();
 
-        UserDetails userDetails = userDetailsService.loadUserByUsername(userName);
+        UserDTO userDetails = userService.getInformationsUtilisateur(userName);
         //todo: map userDetail to userDTO
 
         return ResponseEntity.ok()
@@ -57,6 +57,6 @@ public class AuthenticationController {
 
     @GetMapping("/staticUsers")
     public ResponseEntity getUserList() {
-        return ResponseEntity.ok().body(userDetailsService.);
+        return ResponseEntity.ok().body(userService.getAllUtilisateurs());
     }
 }

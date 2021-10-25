@@ -15,12 +15,11 @@ import java.util.stream.Collectors;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDTO implements UserDetails {
+public class UserDTO {
 
     private Long id;
 
     private String username;
-    private String password;
 
     private String firstName;
     private String lastName;
@@ -33,27 +32,4 @@ public class UserDTO implements UserDetails {
 
     private boolean isActive;
     private boolean isAccountNonLocked;
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return isActive;
-    }
-
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Arrays.stream(authorities)
-                .map(aut -> new SimpleGrantedAuthority(aut))
-                .collect(Collectors.toList());
-    }
 }

@@ -13,19 +13,20 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class StaticUserDetailService implements UserDetailsService {
+public class StaticUtilisateurService implements UtilisateurService {
 
     @Autowired
     private UserRepository userRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDTO getInformationsUtilisateur(String username) throws UsernameNotFoundException {
 
         return userRepository.findUserByUserName(username);
 
     }
 
-    public List<UserDetails> getAllUsers() {
+    @Override
+    public List<UserDTO> getAllUtilisateurs() {
         return userRepository.getAllUsers();
     }
 

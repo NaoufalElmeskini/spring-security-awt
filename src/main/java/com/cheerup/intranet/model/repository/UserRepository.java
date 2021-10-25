@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface UserRepository {
 
-    public List<UserDetails> getAllUsers();
+    public List<UserDTO> getAllUsers();
 
-    UserDetails findUserByUserName(String username);
+    UserDTO findUserByUserName(String username);
 }
