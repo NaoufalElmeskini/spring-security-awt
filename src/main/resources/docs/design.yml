@@ -1,0 +1,34 @@
+
+
+entités principales :
+	- Antenne
+		- president
+		- vice-president
+		- secretaire
+		- tresorier
+		- responsable_hopital
+	- equipe_federale
+		
+	- hopital
+	
+	- Utilisateur
+		- benevole_actif
+		- membre
+		- administrateur_antenne
+		- administrateur
+
+	- Profil visité
+		-
+		
+		
+		
+fonctionnalité: role
+
+CREATION_PROFIL:
+creation d'un nouveau membre: admin
+creation d'un nouveau benevole: admin
+
+GESTION_ANTENNE
+ajout de benevole à l'antenne: admin
+
+		

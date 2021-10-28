@@ -52,6 +52,7 @@ public class AuthenticationController {
 
         return ResponseEntity.ok()
                 .body(userDetails);
+
     }
 
     @GetMapping("/staticUsers")

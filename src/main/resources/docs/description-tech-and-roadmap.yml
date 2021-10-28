@@ -1,0 +1,47 @@
+Overview
+    Le projet Cheer-up-intranet se divises en 3  grands services distincts et autonomes :
+
+        - le serveur du front-end (angular)
+        - le serveur back-end (java, spring boot)
+        - la base de données (mysql)
+	
+    Ces differentes applications sont livrées (à terme) dans des containers docker, afin de faciliter leur déploiement, ainsi que leur utilisation par les membres de l'équipe de développement. L'utilisation de docker est d'autant plus précieuse dans un projet avec un fort potentiel de turn-over comme celui-ci, où l'équipe de développement peut changer constamment.
+
+
+Roadmap (backend)
+	[Controller] :
+	- creer socle de sécurité (spring security)
+	- introduire un system d'authentication/autorisation par token
+	- exposer l'api Swagger 
+	
+	[Model]
+	- creer le model de données
+	- creer base MySQL/Postgrel en local
+	- creer 2 tables simples correspondants à 2 entités
+	- creer socle JPA
+		- spring jpa
+	
+	[Service]
+	-
+
+
+	Jalons :
+	    connection statique :
+	        - Faire une demande de connexion au serveur, le serveur crée un token et le renvoie à User
+	        - User demande le detail de son profil (utilisant le token)
+	        - GET "/userDetail" :
+	            * Si le token est OK => Serveur renvoie comme réponse un DTO statique
+	            * Sinon (token ko) => status 403 + message propre
+
+	    exposer charte graphique :
+	        - exposer corps de la charte graphique, enregistré dans la base de donnée
+	            * no token needed
+	            * GET "/charte_graphique" => HTTP.STATUS 200 + charte { "description": "..." }
+
+	    connection dynamique : user enregistré en BDD
+	        - si token OK => Serveur renvoie UserDTO enregistré dans la base
+	        - sinon : 403
+
+	    signer charte graphique :
+	        - update le User associé à l'utilisateur en marquant la charte comme signée
+	
