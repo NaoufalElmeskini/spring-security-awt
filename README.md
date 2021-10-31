@@ -1,9 +1,10 @@
 # cheer-up-intranet-back
 
 ## Deploiement :
-### Avec Docker
+### Sur Docker
 A partir de la racine du projet :
 
+    $ ./mvnw package 
     $ docker build -t intranet-back .
     $ docker run -p 8080:8080 intranet-back
 ### Sans docker
