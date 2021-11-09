@@ -1,6 +1,7 @@
 # SPRING-SECURITY-JWT
 Projet contenant le socle d'une authentification à base de JWT ([JSON Web Token](https://fr.wikipedia.org/wiki/JSON_Web_Token)) et les frameworks [Spring Security](https://spring.io/projects/spring-security) et [Spring Boot](https://spring.io/projects/spring-boot).
 
+
 Le projet contient aussi un controller (AuthenticationController) exposé grâce à une interface Swagger afin de proposer un scénario de test facile à utiliser.
 ## Deploiement :
 ### Sur Docker
