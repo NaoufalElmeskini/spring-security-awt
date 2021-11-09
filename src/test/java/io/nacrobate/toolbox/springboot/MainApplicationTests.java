@@ -1,10 +1,10 @@
-package com.cheerup.intranet;
+package io.nacrobate.toolbox.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class IntranetApplicationTests {
+class MainApplicationTests {
 
 	@Test
 	void contextLoads() {

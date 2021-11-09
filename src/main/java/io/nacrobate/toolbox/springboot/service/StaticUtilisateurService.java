@@ -1,12 +1,8 @@
-package com.cheerup.intranet.service;
+package io.nacrobate.toolbox.springboot.service;
 
-import com.cheerup.intranet.model.dto.UserDTO;
-import com.cheerup.intranet.model.enums.Authority;
-import com.cheerup.intranet.model.repository.UserRepository;
-import org.apache.commons.lang3.StringUtils;
+import io.nacrobate.toolbox.springboot.model.dto.UserDTO;
+import io.nacrobate.toolbox.springboot.model.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 

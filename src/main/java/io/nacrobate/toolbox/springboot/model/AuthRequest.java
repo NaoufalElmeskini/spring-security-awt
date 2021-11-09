@@ -1,4 +1,4 @@
-package com.cheerup.intranet.model;
+package io.nacrobate.toolbox.springboot.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,9 +1,9 @@
-package com.cheerup.intranet.controller;
+package io.nacrobate.toolbox.springboot.controller;
 
-import com.cheerup.intranet.model.AuthRequest;
-import com.cheerup.intranet.model.dto.UserDTO;
-import com.cheerup.intranet.service.UtilisateurService;
-import com.cheerup.intranet.util.JwtUtil;
+import io.nacrobate.toolbox.springboot.model.AuthRequest;
+import io.nacrobate.toolbox.springboot.model.dto.UserDTO;
+import io.nacrobate.toolbox.springboot.service.UtilisateurService;
+import io.nacrobate.toolbox.springboot.util.JwtUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.slf4j.Logger;

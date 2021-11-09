@@ -1,6 +1,6 @@
-package com.cheerup.intranet.config.filter;
+package io.nacrobate.toolbox.springboot.config.filter;
 
-import com.cheerup.intranet.util.JwtUtil;
+import io.nacrobate.toolbox.springboot.util.JwtUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.springframework.util.ObjectUtils.isEmpty;

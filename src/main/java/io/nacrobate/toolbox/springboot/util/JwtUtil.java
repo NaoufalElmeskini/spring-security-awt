@@ -1,4 +1,4 @@
-package com.cheerup.intranet.util;
+package io.nacrobate.toolbox.springboot.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
