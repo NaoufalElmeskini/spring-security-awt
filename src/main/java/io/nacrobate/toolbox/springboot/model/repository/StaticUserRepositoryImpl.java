@@ -1,7 +1,7 @@
-package com.cheerup.intranet.model.repository;
+package io.nacrobate.toolbox.springboot.model.repository;
 
-import com.cheerup.intranet.model.dto.UserDTO;
-import com.cheerup.intranet.model.enums.Authority;
+import io.nacrobate.toolbox.springboot.model.dto.UserDTO;
+import io.nacrobate.toolbox.springboot.model.enums.Authority;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,13 +1,13 @@
-package com.cheerup.intranet;
+package io.nacrobate.toolbox.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class IntranetApplication {
+public class MainApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(IntranetApplication.class, args);
+		SpringApplication.run(MainApplication.class, args);
 	}
 
 }

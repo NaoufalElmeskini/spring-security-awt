@@ -1,12 +1,14 @@
-# cheer-up-intranet-back
+# SPRING-SECURITY-JWT
+Projet contenant le socle d'une authentification à base de JWT ([JSON Web Token](https://fr.wikipedia.org/wiki/JSON_Web_Token)) et les frameworks [Spring Security](https://spring.io/projects/spring-security) et [Spring Boot](https://spring.io/projects/spring-boot).
 
+Le projet contient aussi un controller (AuthenticationController) exposé grâce à une interface Swagger afin de proposer un scénario de test facile à utiliser.
 ## Deploiement :
 ### Sur Docker
 A partir de la racine du projet :
 
     $ ./mvnw package 
-    $ docker build -t intranet-back .
-    $ docker run -p 8080:8080 intranet-back
+    $ docker build -t spring-security-jwt .
+    $ docker run -p 8080:8080 spring-security-jwt
 ### Sans docker
 - S'assurer d'avoir une **version de JRE java > 11** (la commande `java --version` permet de vérifier cela)
 - A partir de la racine du projet, executer la commande `./mvnw spring-boot:run`

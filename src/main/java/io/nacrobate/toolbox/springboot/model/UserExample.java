@@ -1,4 +1,4 @@
-package com.cheerup.intranet.model;
+package io.nacrobate.toolbox.springboot.model;
 
 import java.io.Serializable;
 import java.util.Date;

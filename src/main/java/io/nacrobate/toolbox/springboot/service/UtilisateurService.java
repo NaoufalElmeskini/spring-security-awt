@@ -1,6 +1,6 @@
-package com.cheerup.intranet.service;
+package io.nacrobate.toolbox.springboot.service;
 
-import com.cheerup.intranet.model.dto.UserDTO;
+import io.nacrobate.toolbox.springboot.model.dto.UserDTO;
 
 import java.util.List;
 

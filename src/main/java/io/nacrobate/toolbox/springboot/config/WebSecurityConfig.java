@@ -1,4 +1,4 @@
-package com.cheerup.intranet.config;
+package io.nacrobate.toolbox.springboot.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

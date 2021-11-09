@@ -1,7 +1,6 @@
-package com.cheerup.intranet.model.repository;
+package io.nacrobate.toolbox.springboot.model.repository;
 
-import com.cheerup.intranet.model.dto.UserDTO;
-import org.springframework.security.core.userdetails.UserDetails;
+import io.nacrobate.toolbox.springboot.model.dto.UserDTO;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
